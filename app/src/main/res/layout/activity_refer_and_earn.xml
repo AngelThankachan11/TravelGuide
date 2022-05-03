@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayish1"
+        android:clickable="true">
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_55"
+            android:background="@color/app_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/ic_back_without_bg"
+            android:scaleType="fitXY"
+            android:padding="@dimen/dp_5"
+            android:onClick="onClick"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="@dimen/dp_7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtBookingHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refer_and_earn1"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/viewHeader"/>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewHeader"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_20">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_3"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginHorizontal="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_10">
+
+                        <TextView
+                            android:id="@+id/txtReferTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/give_benefit_to_friends"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_medium"
+                            android:paddingVertical="@dimen/dp_3"
+                            android:background="@android:color/transparent"
+                            android:layout_marginTop="@dimen/dp_6"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/imgSuccess"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_80"
+                            android:src="@drawable/ic_refer_earn"
+                            android:adjustViewBounds="true"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtReferTitle"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHowitWorks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dp_10"
+                    app:cardElevation="@dimen/dp_3"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginHorizontal="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardTitle">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/sp_20"
+                        android:paddingBottom="@dimen/dp_40">
+
+                        <TextView
+                            android:id="@+id/txtHowitWorks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/how_it_works"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/app_color"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingVertical="@dimen/dp_3"
+                            android:background="@android:color/transparent"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginStart="@dimen/dp_10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/dp_25"
+                            app:cardElevation="@dimen/dp_2"
+                            android:layout_marginHorizontal="@dimen/dp_5"
+                            app:cardBackgroundColor="@color/white"
+                            android:layout_marginTop="@dimen/dp_20"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtHowitWorks">
+
+                            <TextView
+                                android:id="@+id/txtOne"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:text="@string/one"
+                                android:textSize="@dimen/sp_18"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txtInviteFriends"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invite_your_friend"
+                            android:textSize="@dimen/sp_15"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/dp_3"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardOne"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/cardOne"/>
+
+                        <TextView
+                            android:id="@+id/txtInviteHint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/just_share_your_referral_link"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/gray"
+                            android:fontFamily="@font/roboto_medium"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardOne"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtInviteFriends"/>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="@dimen/dp_10"
+                            android:background="@color/gray"
+                            android:layout_marginTop="@dimen/dp_5"
+                            app:layout_constraintStart_toStartOf="@+id/cardOne"
+                            app:layout_constraintEnd_toEndOf="@+id/cardOne"
+                            app:layout_constraintTop_toBottomOf="@+id/cardOne"/>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="@dimen/dp_10"
+                            android:background="@color/gray"
+                            android:layout_marginTop="@dimen/dp_2"
+                            app:layout_constraintStart_toStartOf="@+id/cardOne"
+                            app:layout_constraintEnd_toEndOf="@+id/cardOne"
+                            app:layout_constraintTop_toBottomOf="@+id/view1"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/dp_25"
+                            app:cardElevation="@dimen/dp_2"
+                            android:layout_marginHorizontal="@dimen/dp_5"
+                            app:cardBackgroundColor="@color/white"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                            <TextView
+                                android:id="@+id/txtTwo"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:text="@string/two"
+                                android:textSize="@dimen/sp_18"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txtTheyRegister"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/they_register_on_app"
+                            android:textSize="@dimen/sp_15"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/dp_3"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardTwo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/cardTwo"/>
+
+                        <TextView
+                            android:id="@+id/txtWithBonus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/with_bonus_500rupees"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/gray"
+                            android:fontFamily="@font/roboto_medium"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardTwo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtTheyRegister"/>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="@dimen/dp_10"
+                            android:background="@color/gray"
+                            android:layout_marginTop="@dimen/dp_5"
+                            app:layout_constraintStart_toStartOf="@+id/cardTwo"
+                            app:layout_constraintEnd_toEndOf="@+id/cardTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/cardTwo"/>
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="@dimen/dp_2"
+                            android:layout_height="@dimen/dp_10"
+                            android:background="@color/gray"
+                            android:layout_marginTop="@dimen/dp_2"
+                            app:layout_constraintStart_toStartOf="@+id/cardTwo"
+                            app:layout_constraintEnd_toEndOf="@+id/cardTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/view3"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="@dimen/dp_25"
+                            app:cardElevation="@dimen/dp_4"
+                            android:shadowColor="@color/black"
+                            android:layout_marginHorizontal="@dimen/dp_5"
+                            app:cardBackgroundColor="@color/white"
+                            android:layout_marginTop="@dimen/dp_10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                            <TextView
+                                android:id="@+id/txtThree"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_height="@dimen/dp_40"
+                                android:text="@string/three"
+                                android:textSize="@dimen/sp_18"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txtYouGet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/you_get_59_rupees"
+                            android:textSize="@dimen/sp_15"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_bold"
+                            android:paddingTop="@dimen/dp_3"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardThree"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/cardThree"/>
+
+                        <TextView
+                            android:id="@+id/txtUsableinBooking"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/usable_in_booking"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/gray"
+                            android:fontFamily="@font/roboto_medium"
+                            android:background="@android:color/transparent"
+                            android:paddingHorizontal="@dimen/dp_15"
+                            app:layout_constraintStart_toEndOf="@+id/cardThree"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtYouGet"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/consRefferalLink"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_40"
+                            android:background="@drawable/rounded_corner10_app_bg"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardThree">
+
+                            <TextView
+                                android:id="@+id/txtReferralLink"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_12"
+                                android:textColor="@color/app_color_light"
+                                android:fontFamily="@font/roboto_bold"
+                                android:background="@android:color/transparent"
+                                android:paddingHorizontal="@dimen/dp_15"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/txtCopy"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/txtCopy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/copy_text"
+                                android:textSize="@dimen/sp_14"
+                                android:textColor="@color/app_color_light1"
+                                android:fontFamily="@font/roboto_bold"
+                                android:background="@android:color/transparent"
+                                android:paddingHorizontal="@dimen/dp_15"
+                                android:paddingVertical="@dimen/dp_3"
+                                android:onClick="onClick"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/consReferFriendsNow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_marginHorizontal="@dimen/dp_2"
+                            android:paddingVertical="@dimen/dp_2"
+                            android:onClick="onClick"
+                            android:background="@drawable/rounded_corner20_bright_green"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/consRefferalLink">
+
+                            <ImageView
+                                android:id="@+id/imgTransfer"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:src="@drawable/ic_transfer"
+                                android:adjustViewBounds="true"
+                                android:layout_marginStart="@dimen/dp_20"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/txtReferFriendsNow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/refer_friends_now"
+                                android:textSize="@dimen/sp_15"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/roboto_medium"
+                                android:background="@android:color/transparent"
+                                android:paddingHorizontal="@dimen/dp_15"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardHowitWorks"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

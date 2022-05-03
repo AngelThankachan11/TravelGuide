@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable name="index"
+            type="Integer" />
+
+        <variable
+            name="item"
+            type="com.travel.guide.apicalls.model.NotificationResBean" />
+
+        <variable name="ItemClickListener"
+            type="com.travel.guide.adapters.NotificationAdapter" />
+
+        <import type="android.view.View" />
+
+        <!--<import type="com.medicalworld.extra.Constants" />-->
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="@dimen/dp_4"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginVertical="@dimen/dp_5"
+        android:layout_marginHorizontal="@dimen/dp_10">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/dp_10"
+                android:paddingHorizontal="@dimen/dp_20"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/imgNotification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle"/>
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingVertical="@dimen/dp_10"
+                android:paddingHorizontal="@dimen/dp_20"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imgNotification"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable name="index"
+            type="Integer" />
+
+        <!--<variable
+            name="item"
+            type="com.aamod.bukish.models.CategoryItemResBean" />-->
+
+        <variable name="OnItemClickListener"
+            type="com.travel.guide.adapters.PopularAdapter" />
+
+        <!--<import type="android.view.View" />-->
+
+        <!--<import type="com.medicalworld.extra.Constants" />-->
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/imgNavIcon"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow_new"
+            android:adjustViewBounds="true"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:padding="@dimen/dp_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtProfileBtnTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/refer_and_earn1"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/gray4"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_10"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/imgNavIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow_new"
+            android:adjustViewBounds="true"
+            android:paddingHorizontal="@dimen/dp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

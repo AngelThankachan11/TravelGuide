@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/txtSpinItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/sp_14"
+    android:gravity="left"
+    android:textColor="@color/gray4"
+    android:maxLines="1"
+    android:fontFamily="@font/roboto_bold"
+    android:textAllCaps="false"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/dp_8"/>

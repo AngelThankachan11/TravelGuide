@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_marginHorizontal="@dimen/dp_3"
+            android:layout_marginVertical="@dimen/dp_10"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/imgItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/dp_10"
+                app:srcCompat="@drawable/ic_home" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textSize="@dimen/dp_12"
+            android:visibility="gone"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/app_color"
+            android:paddingHorizontal="@dimen/dp_3"
+            android:paddingVertical="@dimen/dp_5"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</layout>
